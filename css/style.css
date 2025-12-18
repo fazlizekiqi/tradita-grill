@@ -610,8 +610,7 @@ snow-overlay-hero .snowflake:nth-child(1)  { left: 2%;  font-size: .9rem;  -webk
     opacity: .5;
     backdrop-filter: none;
     font-weight: 200;
-    letter-spacing: 0.01em; /* compact tracking */
-    font-size: 0.95rem;     /* slightly smaller */
+    font-size: 0.90rem;     /* slightly smaller */
     text-transform: full-width;
     -webkit-animation: banner-xmas-glow 3s ease-in-out infinite;
     animation: banner-xmas-glow 3s ease-in-out infinite;
