@@ -510,3 +510,7 @@
         display: none; /* Chrome/Safari */
     }
 }
+
+.image-carousel .owl-nav {
+    display: none !important;
+}
