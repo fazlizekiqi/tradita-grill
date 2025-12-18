@@ -514,3 +514,130 @@
 .image-carousel .owl-nav {
     display: none !important;
 }
+/* Add to `css/style.css` */
+/* Layering so snow sits above background but below content */
+.hero-header { position: relative; }
+.hero-header > .container { position: relative; z-index: 2; }
+
+/* Full-hero snowfall */
+.snow-overlay-hero {
+    position: absolute;
+    inset: 0;
+    z-index: 999999;
+    height: 25%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Snowflakes */
+.snow-overlay-hero .snowflake {
+    width: 30px;
+    height: 40px;
+    z-index: 9999;
+    position: absolute;
+    top: 5%;
+    color: #fff;
+    opacity: 0.9;
+    font-size: 1rem;
+    filter: drop-shadow(0 0 2px rgba(255,255,255,0.6));
+    animation: snow-fall 2s linear infinite, snow-sway 2s ease-in-out infinite;
+}
+
+/* Distribute flakes across the width with varied sizes, speeds, delays */
+.snow-overlay-hero .snowflake:nth-child(1)  { left: 2%;  font-size: .9rem;  animation-duration: 12s; animation-delay: 0s; }
+.snow-overlay-hero .snowflake:nth-child(2)  { left: 7%;  font-size: 1.2rem; animation-duration: 10s; animation-delay: 1s; }
+.snow-overlay-hero .snowflake:nth-child(3)  { left: 12%; font-size: 1rem;  animation-duration: 13s; animation-delay: .5s; }
+.snow-overlay-hero .snowflake:nth-child(4)  { left: 17%; font-size: .8rem;  animation-duration: 14s; animation-delay: 2s; }
+.snow-overlay-hero .snowflake:nth-child(5)  { left: 22%; font-size: 1.1rem; animation-duration: 11s; animation-delay: .8s; }
+.snow-overlay-hero .snowflake:nth-child(6)  { left: 27%; font-size: .9rem;  animation-duration: 15s; animation-delay: 2.2s; }
+.snow-overlay-hero .snowflake:nth-child(7)  { left: 32%; font-size: 1.3rem; animation-duration: 9s;  animation-delay: 1.5s; }
+.snow-overlay-hero .snowflake:nth-child(8)  { left: 37%; font-size: .8rem;  animation-duration: 16s; animation-delay: .3s; }
+.snow-overlay-hero .snowflake:nth-child(9)  { left: 42%; font-size: 1rem;  animation-duration: 12s; animation-delay: 2.8s; }
+.snow-overlay-hero .snowflake:nth-child(10) { left: 47%; font-size: 1.1rem; animation-duration: 11s; animation-delay: .7s; }
+.snow-overlay-hero .snowflake:nth-child(11) { left: 52%; font-size: .9rem;  animation-duration: 13s; animation-delay: 1.8s; }
+.snow-overlay-hero .snowflake:nth-child(12) { left: 57%; font-size: 1.2rem; animation-duration: 10s; animation-delay: .2s; }
+.snow-overlay-hero .snowflake:nth-child(13) { left: 62%; font-size: .8rem;  animation-duration: 15s; animation-delay: 1.2s; }
+.snow-overlay-hero .snowflake:nth-child(14) { left: 67%; font-size: 1rem;  animation-duration: 12s; animation-delay: 2.4s; }
+.snow-overlay-hero .snowflake:nth-child(15) { left: 72%; font-size: 1.1rem; animation-duration: 11s; animation-delay: .4s; }
+.snow-overlay-hero .snowflake:nth-child(16) { left: 77%; font-size: .9rem;  animation-duration: 14s; animation-delay: 1.9s; }
+.snow-overlay-hero .snowflake:nth-child(17) { left: 82%; font-size: 1.3rem; animation-duration: 9.5s;animation-delay: .9s; }
+.snow-overlay-hero .snowflake:nth-child(18) { left: 87%; font-size: .8rem;  animation-duration: 16s; animation-delay: 2.7s; }
+.snow-overlay-hero .snowflake:nth-child(19) { left: 92%; font-size: 1rem;  animation-duration: 12s; animation-delay: 1.1s; }
+.snow-overlay-hero .snowflake:nth-child(20) { left: 97%; font-size: 1.2rem; animation-duration: 10.5s;animation-delay: .6s; }
+.snow-overlay-hero .snowflake:nth-child(21) { left: 57%; font-size: 1.2rem; animation-duration: 10.5s;animation-delay: .6s; }
+.snow-overlay-hero .snowflake:nth-child(22) { left: 27%; font-size: 1.2rem; animation-duration: 10.5s;animation-delay: .6s; }
+.snow-overlay-hero .snowflake:nth-child(23) { left: 17%; font-size: 1.2rem; animation-duration: 10.5s;animation-delay: .6s; }
+.snow-overlay-hero .snowflake:nth-child(24) { left: 77%; font-size: 1.2rem; animation-duration: 10.5s;animation-delay: .6s; }
+.snow-overlay-hero .snowflake:nth-child(25) { left: 27%; font-size: 1.2rem; animation-duration: 10.5s;animation-delay: .6s; }
+.snow-overlay-hero .snowflake:nth-child(26) { left: 67%; font-size: 1.2rem; animation-duration: 10.5s;animation-delay: .6s; }
+.snow-overlay-hero .snowflake:nth-child(27) { left: 87%; font-size: 1.2rem; animation-duration: 10.5s;animation-delay: .6s; }
+.snow-overlay-hero .snowflake:nth-child(28) { left: 45%; font-size: 1.2rem; animation-duration: 10.5s;animation-delay: .6s; }
+.snow-overlay-hero .snowflake:nth-child(29) { left: 12%; font-size: 1.2rem; animation-duration: 10.5s;animation-delay: .6s; }
+
+/* Vertical fall */
+@keyframes snow-fall {
+    0%   { transform: translateY(-10%); opacity: 0; }
+    10%  { opacity: 0.95; }
+    100% { transform: translateY(510%); opacity: 0; }
+}
+
+/* Gentle horizontal sway */
+@keyframes snow-sway {
+    0%   { margin-left: 0; }
+    30%  { margin-left: 50px; }
+    60%  { margin-left: -50px; }
+    100% { margin-left: 0; }
+}
+
+.snow-overlay strong.text-white {
+    display: inline-block;
+    padding: 0.4rem 0.45rem;
+    color: #fff;
+    background: transparent;
+    border: none;
+    border-radius: 0.25rem;
+    opacity: .25;
+    backdrop-filter: none;
+    font-weight: 200;
+    letter-spacing: 0.01em; /* compact tracking */
+    font-size: 0.95rem;     /* slightly smaller */
+    text-transform: full-width;
+    animation: banner-xmas-glow 3s ease-in-out infinite;
+    text-shadow:
+            0 0 0.18rem rgba(255, 255, 255, 0.7),
+            0 0 0.38rem rgba(255, 255, 255, 0.5),
+            0 0 0.7rem rgba(254, 161, 22, 0.6); /* base warm glow */
+}
+
+@keyframes banner-xmas-glow {
+    0% {
+        text-shadow:
+                0 0 0.18rem rgba(255, 255, 255, 0.7),
+                0 0 0.38rem rgba(255, 255, 255, 0.5),
+                0 0 0.9rem rgba(220, 20, 60, 0.8);   /* red */
+    }
+    25% {
+        text-shadow:
+                0 0 0.18rem rgba(255, 255, 255, 0.7),
+                0 0 0.38rem rgba(255, 255, 255, 0.5),
+                0 0 0.9rem rgba(0, 200, 120, 0.85);  /* green */
+    }
+    50% {
+        text-shadow:
+                0 0 0.18rem rgba(255, 255, 255, 0.8),
+                0 0 0.45rem rgba(255, 255, 255, 0.6),
+                0 0 1.1rem rgba(254, 161, 22, 0.95); /* gold (matches --primary) */
+    }
+    75% {
+        text-shadow:
+                0 0 0.18rem rgba(255, 255, 255, 0.75),
+                0 0 0.38rem rgba(255, 255, 255, 0.55),
+                0 0 0.95rem rgba(80, 180, 255, 0.85); /* icy blue */
+    }
+    100% {
+        text-shadow:
+                0 0 0.18rem rgba(255, 255, 255, 0.7),
+                0 0 0.38rem rgba(255, 255, 255, 0.5),
+                0 0 0.9rem rgba(220, 20, 60, 0.8);   /* red */
+    }
+}
