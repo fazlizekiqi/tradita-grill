@@ -565,16 +565,16 @@ snow-overlay-hero .snowflake:nth-child(1)  { left: 2%;  font-size: .9rem;  -webk
 .snow-overlay-hero .snowflake:nth-child(17) { left: 82%; font-size: 1.3rem; -webkit-animation-duration: 9.5s; animation-duration: 9.5s; -webkit-animation-delay: .9s; animation-delay: .9s; }
 .snow-overlay-hero .snowflake:nth-child(18) { left: 87%; font-size: .8rem;  -webkit-animation-duration: 16s; animation-duration: 16s; -webkit-animation-delay: 2.7s; animation-delay: 2.7s; }
 .snow-overlay-hero .snowflake:nth-child(19) { left: 92%; font-size: 1rem;  -webkit-animation-duration: 12s; animation-duration: 12s; -webkit-animation-delay: 1.1s; animation-delay: 1.1s; }
-.snow-overlay-hero .snowflake:nth-child(20) { left: 97%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 10.5s; -webkit-animation-delay: .6s; animation-delay: .6s; }
-.snow-overlay-hero .snowflake:nth-child(21) { left: 57%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 10.5s; -webkit-animation-delay: .6s; animation-delay: .6s; }
-.snow-overlay-hero .snowflake:nth-child(22) { left: 27%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 10.5s; -webkit-animation-delay: .6s; animation-delay: .6s; }
-.snow-overlay-hero .snowflake:nth-child(23) { left: 17%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 10.5s; -webkit-animation-delay: .6s; animation-delay: .6s; }
-.snow-overlay-hero .snowflake:nth-child(24) { left: 77%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 10.5s; -webkit-animation-delay: .6s; animation-delay: .6s; }
-.snow-overlay-hero .snowflake:nth-child(25) { left: 27%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 10.5s; -webkit-animation-delay: .6s; animation-delay: .6s; }
-.snow-overlay-hero .snowflake:nth-child(26) { left: 67%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 10.5s; -webkit-animation-delay: .6s; animation-delay: .6s; }
-.snow-overlay-hero .snowflake:nth-child(27) { left: 87%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 10.5s; -webkit-animation-delay: .6s; animation-delay: .6s; }
-.snow-overlay-hero .snowflake:nth-child(28) { left: 45%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 10.5s; -webkit-animation-delay: .6s; animation-delay: .6s; }
-.snow-overlay-hero .snowflake:nth-child(29) { left: 12%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 10.5s; -webkit-animation-delay: .6s; animation-delay: .6s; }
+.snow-overlay-hero .snowflake:nth-child(20) { left: 97%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 15.5s; -webkit-animation-delay: 2.5s; animation-delay: 2.5s; }
+.snow-overlay-hero .snowflake:nth-child(21) { left: 57%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 16.5s; -webkit-animation-delay: 3.6s; animation-delay: 3.6s; }
+.snow-overlay-hero .snowflake:nth-child(22) { left: 27%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 13.5s; -webkit-animation-delay: 4.6s; animation-delay: 4.6s; }
+.snow-overlay-hero .snowflake:nth-child(23) { left: 17%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 17.5s; -webkit-animation-delay: 2.1s; animation-delay: 2.1s; }
+.snow-overlay-hero .snowflake:nth-child(24) { left: 77%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 13.1s; -webkit-animation-delay: 5.1s; animation-delay: 5.1s; }
+.snow-overlay-hero .snowflake:nth-child(25) { left: 27%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 5.1s; -webkit-animation-delay: 6.6s; animation-delay: 6.6s; }
+.snow-overlay-hero .snowflake:nth-child(26) { left: 67%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 16s; -webkit-animation-delay: 3.3s; animation-delay: 3.3s; }
+.snow-overlay-hero .snowflake:nth-child(27) { left: 87%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 12s; -webkit-animation-delay: 4.2s; animation-delay: 4.2s; }
+.snow-overlay-hero .snowflake:nth-child(28) { left: 45%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 13s; -webkit-animation-delay: 1.9s; animation-delay: 1.9s; }
+.snow-overlay-hero .snowflake:nth-child(29) { left: 12%; font-size: 1.2rem; -webkit-animation-duration: 10.5s;animation-duration: 15s; -webkit-animation-delay: 5.2s;  animation-delay: 5.2s; }
 
 /* Vertical fall */
 /* Combined vertical fall and horizontal sway */
