@@ -31,6 +31,74 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Menu image lightbox (page-local) -->
+    <style>
+        .menu-lightbox-trigger {
+            cursor: pointer;
+        }
+
+        .menu-lightbox-trigger:focus {
+            outline: 2px solid rgba(254, 161, 22, .5);
+            outline-offset: 2px;
+        }
+
+        #menuLightboxModal .modal-body {
+            padding: 0;
+            background: #000;
+        }
+
+        #menuLightboxImage {
+            width: 100%;
+            max-height: calc(100vh - 230px);
+            object-fit: contain;
+            background: #000;
+        }
+
+        #menuLightboxCaption {
+            background: #111;
+            color: #fff;
+        }
+
+        #menuLightboxCaption .price {
+            color: #FEA116;
+        }
+
+        #menuLightboxModal .menu-lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: 44px;
+            height: 44px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, .35);
+            background: rgba(0, 0, 0, .35);
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #menuLightboxModal .menu-lightbox-nav:hover {
+            background: rgba(0, 0, 0, .55);
+        }
+
+        #menuLightboxPrev {
+            left: 12px;
+        }
+
+        #menuLightboxNext {
+            right: 12px;
+        }
+
+        @media (max-width: 576px) {
+            #menuLightboxModal .menu-lightbox-nav {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -52,7 +120,7 @@
                 <h1 class="text-primary m-0">
                     <img src="img/tradita-grill-yellow.png" alt="Tradita Grill"
                          style="max-height: 2em; vertical-align: middle;">
-                    </i></h1>
+                </h1>
                 <!-- <img src="img/logo.png" alt="Logo"> -->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -172,7 +240,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/pleskavic-shpijes.jpg"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/pleskavic-shpijes.jpg"
                                          alt="Pleskavice Shpije"
                                          style="width: 80px; height: 80px; object-fit: fill;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -186,7 +254,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/suxhuk.jpg" alt="Suxhuk"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/suxhuk.jpg" alt="Suxhuk"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -200,7 +268,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/virshlle.jpg" alt="Vienerli"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/virshlle.jpg" alt="Vienerli"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -214,7 +282,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/double-burger.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/double-burger.png"
                                          alt="Double Hamburger"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -229,7 +297,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/hamburger-pule.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/hamburger-pule.png"
                                          alt="Chicken Burger"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -243,7 +311,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/hamburger.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/hamburger.png"
                                          alt="Hamburger Tasche Brot"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -257,7 +325,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src= "img/schnitzel-pule.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src= "img/schnitzel-pule.png"
                                          alt="Poulet Schnitzel mit Potatoes"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -271,7 +339,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/suxhuk-me-veze.jpg"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/suxhuk-me-veze.jpg"
                                          alt="Albanische suxhuk mit Ei"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -301,7 +369,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/kombinim.jpg" alt="Grill MIX"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/kombinim.jpg" alt="Grill MIX"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -315,7 +383,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/kombinim-pa-mish.jpg"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/kombinim-pa-mish.jpg"
                                          alt="Grill MIX Klein"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -330,7 +398,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/kalbsfleischstreifen.jpg"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/kalbsfleischstreifen.jpg"
                                          alt="Kalbsfleischstreifen Grilliert"
                                          style="width: 80px; height: 80px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -344,7 +412,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/mish-viqi.jpg"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/mish-viqi.jpg"
                                          alt="Kalbsfleisch vom Grill"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -358,7 +426,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/mish-pule.jpg"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/mish-pule.jpg"
                                          alt="Poulet Fleisch vom Grill"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -372,7 +440,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/fitnes-teller.jpg"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/fitnes-teller.jpg"
                                          alt="Fitnesteller mit Pouletfleisch"
                                          style="width: 80px; height: 80px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -387,7 +455,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/qebapa.jpg" alt="Qofte"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/qebapa.jpg" alt="Qofte"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -401,7 +469,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/pleskavic.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/pleskavic.png"
                                          alt="Pleskavica"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -416,7 +484,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/sharri.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/sharri.png"
                                          alt="Pleskavica Sharri"
                                          style="width: 80px; height: 80px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -435,7 +503,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/sallat-shope.jpg"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/sallat-shope.jpg"
                                          alt="Salat Shope"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -451,7 +519,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/sallat-fshati.jpg" alt="Salat Fshati"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/sallat-fshati.jpg" alt="Salat Fshati"
                                          style="width: 80px; height: 80px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -466,7 +534,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 flex-fluid rounded" src="img/grune-sallat.jpg" alt="Grüne Salat"
+                                    <img class="flex-shrink-0 flex-fluid rounded menu-lightbox-trigger" src="img/grune-sallat.jpg" alt="Grüne Salat"
                                          style="width: 80px; height: 80px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -480,7 +548,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/bruscheta.png" alt="Bruschetta"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/bruscheta.png" alt="Bruschetta"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -495,7 +563,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/djath.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/djath.png"
                                          alt="Feta Käse (Stuck)"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -510,7 +578,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/speca-me-gjize.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/speca-me-gjize.png"
                                          alt="Paprika mit Rahm"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -525,7 +593,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/turshi.jpg"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/turshi.jpg"
                                          alt="Turshi (Portion, saisonal)"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -541,7 +609,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/pogaqe.jpg"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/pogaqe.jpg"
                                          alt="Fugace (Pogaçë Shtëpije)"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -556,7 +624,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/ballenbrot.jpg" alt="Ballonbrot"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/ballenbrot.jpg" alt="Ballonbrot"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -570,7 +638,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/kepurdha.png" alt="Champignons"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/kepurdha.png" alt="Champignons"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -587,7 +655,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/nuggets-children.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/nuggets-children.png"
                                          alt="Chicken Nuggets und Pommes"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -603,7 +671,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/qofte-children.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/qofte-children.png"
                                          alt="Qofte und Pommes"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -619,7 +687,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/mini-burger.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/mini-burger.png"
                                          alt="Mini Hamburger mit Pommes"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -638,7 +706,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/specials-1.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/specials-1.png"
                                          alt="Bohneneintopf im Römertopf"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -654,7 +722,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/specials-2.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/specials-2.png"
                                          alt="Grillierte Peperoncini (Stück)"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -669,7 +737,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/tarator.jpg" alt="Tarator"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/tarator.jpg" alt="Tarator"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
@@ -683,7 +751,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/pommes-frites.webp"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/pommes-frites.webp"
                                          alt="Pommes Frites"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -701,7 +769,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/pizza-pule.jpg"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/pizza-pule.jpg"
                                          alt="Pizza Pule"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -717,7 +785,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/pizza-margharita.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/pizza-margharita.png"
                                          alt="Pizza Margherita"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -732,7 +800,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/pizza-padrone.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/pizza-padrone.png"
                                          alt="Pizza Padrone"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -748,7 +816,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/pizza-perscuitto.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/pizza-perscuitto.png"
                                          alt="Pizza Prosciutto"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -764,7 +832,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/pizza_tonno.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/pizza_tonno.png"
                                          alt="Pizza Tonno"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -780,7 +848,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/pizza-tradita.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/pizza-tradita.png"
                                          alt="Pizza Tradita"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -796,7 +864,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/pizza-salami.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/pizza-salami.png"
                                          alt="Pizza Salami"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -812,7 +880,7 @@
 
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="img/pizza-suxhuk.png"
+                                    <img class="flex-shrink-0 img-fluid rounded menu-lightbox-trigger" src="img/pizza-suxhuk.png"
                                          alt="Pizza Suxhuk"
                                          style="width: 80px; height: 100px; object-fit: scale-down;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
@@ -1060,6 +1128,32 @@
                         </div>
                     </div>
                 </div>
+                <!-- Menu image lightbox modal -->
+                <div class="modal fade" id="menuLightboxModal" tabindex="-1" aria-labelledby="menuLightboxTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content bg-dark border-0">
+                            <div class="modal-header border-0">
+                                <h5 class="modal-title text-white" id="menuLightboxTitle">&nbsp;</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body position-relative">
+                                <button type="button" class="menu-lightbox-nav" id="menuLightboxPrev" aria-label="Previous dish">
+                                    <i class="bi bi-chevron-left"></i>
+                                </button>
+                                <button type="button" class="menu-lightbox-nav" id="menuLightboxNext" aria-label="Next dish">
+                                    <i class="bi bi-chevron-right"></i>
+                                </button>
+                                <img id="menuLightboxImage" src="" alt="" />
+                            </div>
+                            <div class="modal-footer border-0" id="menuLightboxCaption">
+                                <div class="w-100 d-flex align-items-start justify-content-between flex-wrap gap-2">
+                                    <div class="fw-semibold" id="menuLightboxDish">&nbsp;</div>
+                                    <div class="fw-bold price" id="menuLightboxPrice">&nbsp;</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- Menu End -->
 
             </div>
@@ -1151,6 +1245,183 @@
 
 <!-- Template Javascript -->
 <script src="js/main.js"></script>
+
+<!-- Menu image lightbox logic (page-local) -->
+<script>
+    (function () {
+        // Collect menu items from the currently active tab pane.
+        // Each item is represented by the image + its name/price next to it.
+
+        var modalEl = document.getElementById('menuLightboxModal');
+        if (!modalEl || typeof bootstrap === 'undefined') return;
+
+        var modal = new bootstrap.Modal(modalEl, {
+            keyboard: true,
+            focus: true
+        });
+
+        var imgEl = document.getElementById('menuLightboxImage');
+        var dishEl = document.getElementById('menuLightboxDish');
+        var priceEl = document.getElementById('menuLightboxPrice');
+        var titleEl = document.getElementById('menuLightboxTitle');
+        var prevBtn = document.getElementById('menuLightboxPrev');
+        var nextBtn = document.getElementById('menuLightboxNext');
+
+        var items = [];
+        var currentIndex = 0;
+
+        function isVisible(el) {
+            return !!(el && (el.offsetWidth || el.offsetHeight || el.getClientRects().length));
+        }
+
+        function getActivePane() {
+            return document.querySelector('.tab-content .tab-pane.active.show') || document.querySelector('.tab-content .tab-pane');
+        }
+
+        function getItemsForPane(paneEl) {
+            if (!paneEl) return [];
+
+            var imgs = paneEl.querySelectorAll('img.flex-shrink-0');
+            var result = [];
+
+            imgs.forEach(function (img) {
+                // Skip decorative logos etc. (only menu list images are flex-shrink-0 in the panes)
+                var itemRoot = img.closest('.d-flex.align-items-center');
+                if (!itemRoot) return;
+
+                var nameSpan = itemRoot.querySelector('h5 span');
+                var priceSpan = itemRoot.querySelector('h5 .text-primary');
+
+                var name = nameSpan ? nameSpan.textContent.trim() : (img.alt || '').trim();
+                var price = priceSpan ? priceSpan.textContent.trim() : '';
+                var src = img.getAttribute('src') || '';
+
+                if (!src) return;
+
+                result.push({
+                    src: src,
+                    alt: img.getAttribute('alt') || name || 'Menu item',
+                    name: name || 'Menu item',
+                    price: price || ''
+                });
+            });
+
+            return result;
+        }
+
+        function refreshTriggers() {
+            // Make all menu dish images clickable
+            var panes = document.querySelectorAll('.tab-content .tab-pane');
+            panes.forEach(function (pane) {
+                var paneItems = getItemsForPane(pane);
+                var paneImgs = pane.querySelectorAll('img.flex-shrink-0');
+
+                paneImgs.forEach(function (img) {
+                    var itemRoot = img.closest('.d-flex.align-items-center');
+                    if (!itemRoot) return;
+
+                    // Only set up if it looks like a menu item (has price) OR is inside menu grid
+                    var looksLikeMenuItem = !!itemRoot.querySelector('h5 .text-primary');
+                    if (!looksLikeMenuItem) return;
+
+                    img.classList.add('menu-lightbox-trigger');
+                    img.setAttribute('role', 'button');
+                    img.setAttribute('tabindex', '0');
+
+                    // Store index relative to its pane so we can open correct item in that pane.
+                    var imgSrc = img.getAttribute('src') || '';
+                    var idx = paneItems.findIndex(function (it) { return it.src === imgSrc; });
+                    if (idx < 0) idx = 0;
+                    img.dataset.lightboxIndex = String(idx);
+                    img.dataset.lightboxPaneId = pane.getAttribute('id') || '';
+
+                    function openFromImg() {
+                        var activePane = getActivePane();
+                        // If user clicks an image in a non-active pane, still open from that pane.
+                        var paneToUse = pane;
+                        items = getItemsForPane(paneToUse);
+                        if (!items.length) {
+                            // Fallback to active pane
+                            items = getItemsForPane(activePane);
+                        }
+                        currentIndex = Math.max(0, Math.min(items.length - 1, parseInt(img.dataset.lightboxIndex || '0', 10) || 0));
+                        render();
+                        modal.show();
+                    }
+
+                    img.addEventListener('click', function () {
+                        openFromImg();
+                    });
+
+                    img.addEventListener('keydown', function (e) {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            openFromImg();
+                        }
+                    });
+                });
+            });
+        }
+
+        function render() {
+            if (!items.length) return;
+            var item = items[currentIndex];
+
+            imgEl.src = item.src;
+            imgEl.alt = item.alt;
+            dishEl.textContent = item.name;
+            priceEl.textContent = item.price;
+            titleEl.textContent = item.name;
+
+            // Disable nav if only 1 item
+            var disabled = items.length <= 1;
+            prevBtn.disabled = disabled;
+            nextBtn.disabled = disabled;
+            prevBtn.style.display = disabled ? 'none' : '';
+            nextBtn.style.display = disabled ? 'none' : '';
+        }
+
+        function prev() {
+            if (!items.length) return;
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            render();
+        }
+
+        function next() {
+            if (!items.length) return;
+            currentIndex = (currentIndex + 1) % items.length;
+            render();
+        }
+
+        prevBtn.addEventListener('click', prev);
+        nextBtn.addEventListener('click', next);
+
+        // Keyboard support while modal is open
+        modalEl.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prev();
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                next();
+            }
+        });
+
+        // If user changes category tabs, keep things consistent for next open.
+        document.querySelectorAll('[data-bs-toggle="pill"]').forEach(function (tab) {
+            tab.addEventListener('shown.bs.tab', function () {
+                // no-op; we rebuild item list on open
+            });
+        });
+
+        // Initial setup
+        refreshTriggers();
+
+        // Re-run setup after all resources load (covers cases where DOM is modified by scripts)
+        window.addEventListener('load', refreshTriggers);
+    })();
+</script>
 </body>
 
 </html>
+
